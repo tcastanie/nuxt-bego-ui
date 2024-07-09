@@ -1,0 +1,33 @@
+{
+  "name": "nuxt-bego-ui",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./nuxt.config.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nuxi dev .playground",
+    "dev:prepare": "nuxt prepare .playground",
+    "build": "nuxt build .playground",
+    "generate": "nuxt generate .playground",
+    "preview": "nuxt preview .playground",
+    "cleanup": "nuxi cleanup .playground",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@formkit/auto-animate": "0.8.2",
+    "@iconify-json/mingcute": "1.1.18",
+    "@nuxt/eslint": "0.3.13",
+    "@unocss/nuxt": "0.61.3",
+    "@unocss/preset-icons": "0.61.3",
+    "@unocss/reset": "0.61.3",
+    "@vueuse/core": "10.11.0",
+    "@vueuse/nuxt": "10.11.0",
+    "eslint": "9.6.0",
+    "nuxt": "3.12.3",
+    "typescript": "5.5.3",
+    "vue": "3.4.31"
+  },
+  "packageManager": "pnpm@9.5.0"
+}
