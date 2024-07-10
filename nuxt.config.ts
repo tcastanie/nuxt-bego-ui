@@ -15,6 +15,9 @@ export default defineNuxtConfig({
     },
   },
   css: ['@unocss/reset/tailwind.css'],
+  unocss: {
+    nuxtLayers: true,
+  },
   eslint: {
     config: {
       stylistic: true,
