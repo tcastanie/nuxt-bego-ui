@@ -17,16 +17,16 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "0.8.2",
-    "@iconify-json/mingcute": "1.1.18",
     "@nuxt/eslint": "0.3.13",
     "@unocss/nuxt": "0.61.3",
     "@unocss/preset-icons": "0.61.3",
     "@unocss/reset": "0.61.3",
     "@vueuse/core": "10.11.0",
-    "@vueuse/nuxt": "10.11.0"
+    "@vueuse/nuxt": "10.11.0",
+    "eslint": "9.6.0"
   },
   "devDependencies": {
-    "eslint": "9.6.0",
+    "@iconify-json/mingcute": "1.1.18",
     "nuxt": "3.12.3"
   },
   "packageManager": "pnpm@9.5.0"
