@@ -23,13 +23,25 @@ export default defineNuxtConfig({
 > [!NOTE]
 > The `install: true` option installs the npm dependencies.
 
-Then install [MingCute](https://github.com/Richard9394/MingCute) iconify package for some default icons to work:
+```bash
+pnpm i -D @iconify-json/mingcute @unocss/core eslint
+```
+
+## UnoCSS configuration
+
+Install [MingCute](https://github.com/Richard9394/MingCute) iconify package for some default icons to work:
 
 ```bash
 pnpm i -D @iconify-json/mingcute
 ```
 
-UnoCSS config (from [UnoCSS doc](https://unocss.dev/integrations/nuxt#configuration)):
+And `@unocss/core` to get layer config.
+
+```bash
+pnpm i -D @unocss/core
+```
+
+To reexport the layer config:
 
 ```ts
 // uno.config.ts
@@ -37,6 +49,30 @@ import config from './.nuxt/uno.config.mjs'
 
 export default config
 ```
+
+To modify/extend it:
+
+```ts
+// uno.config.ts
+import { mergeConfigs } from '@unocss/core'
+import config from './.nuxt/uno.config.mjs'
+
+export default mergeConfigs([config, {
+  // your overrides
+}])
+```
+
+[See more in doc](https://unocss.dev/integrations/nuxt#configuration)
+
+### Eslint
+
+If needed, install `eslint`
+
+```bash
+pnpm i -D eslint
+```
+
+Add your rules in `eslint.config.mjs`. See more on [eslint.nuxt.com](https://eslint.nuxt.com/)
 
 ### Usage
 

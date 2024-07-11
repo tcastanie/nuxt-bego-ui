@@ -29,6 +29,7 @@ export default defineConfig({
     'bg-bego-400',
     'bg-bego-950',
     'bg-bego-950/10',
+    'bg-zinc-900',
     'ring-bego-400',
     'divide-bego-400',
     'hover:text-bego-500',
