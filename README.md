@@ -13,7 +13,7 @@ Add the dependency to `extends` in `nuxt.config.ts`:
 
 ```ts
 // nuxt.config.ts
-defineNuxtConfig({
+export default defineNuxtConfig({
   extends: [
     ['github:tcastanie/nuxt-bego-ui', { install: true }],
   ],
