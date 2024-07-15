@@ -14,32 +14,30 @@ Add the dependency to `extends` in `nuxt.config.ts`:
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  extends: [
-    ['github:tcastanie/nuxt-bego-ui', { install: true }],
-  ],
+  extends: 'github:tcastanie/nuxt-bego-ui',
 })
 ```
 
-> [!NOTE]
-> The `install: true` option installs the npm dependencies.
+### Packages in children
+
+```txt
+@formkit/auto-animate
+@iconify-json/mingcute
+@nuxt/eslint
+@unocss/nuxt
+@vueuse/core
+@vueuse/nuxt
+eslint
+nuxt
+unocss
+vue
+```
 
 ```bash
-pnpm i -D @iconify-json/mingcute @unocss/core eslint
+pnpm i -D @formkit/auto-animate @iconify-json/mingcute @nuxt/eslint @unocss/nuxt @vueuse/core @vueuse/nuxt eslint nuxt unocss vue
 ```
 
 ## UnoCSS configuration
-
-Install [MingCute](https://github.com/Richard9394/MingCute) iconify package for some default icons to work:
-
-```bash
-pnpm i -D @iconify-json/mingcute
-```
-
-And `@unocss/core` to get layer config.
-
-```bash
-pnpm i -D @unocss/core
-```
 
 To reexport the layer config:
 
@@ -54,7 +52,7 @@ To modify/extend it:
 
 ```ts
 // uno.config.ts
-import { mergeConfigs } from '@unocss/core'
+import { mergeConfigs } from 'unocss'
 import config from './.nuxt/uno.config.mjs'
 
 export default mergeConfigs([config, {
@@ -65,12 +63,6 @@ export default mergeConfigs([config, {
 [See more in doc](https://unocss.dev/integrations/nuxt#configuration)
 
 ### Eslint
-
-If needed, install `eslint`
-
-```bash
-pnpm i -D eslint
-```
 
 Add your rules in `eslint.config.mjs`. See more on [eslint.nuxt.com](https://eslint.nuxt.com/)
 
@@ -120,4 +112,12 @@ Then start the development server of the `.playground` folder, on <http://localh
 
 ```bash
 pnpm run dev
+```
+
+## Website development
+
+Start the dev server of the `website` folder, on <http://localhost:3000>
+
+```bash
+pnpm run dev:web
 ```

@@ -7,27 +7,29 @@
   "license": "MIT",
   "scripts": {
     "dev": "nuxi dev .playground",
-    "dev:prepare": "nuxt prepare .playground",
+    "dev:web": "nuxi dev website",
+    "prepare": "nuxt prepare .playground & nuxt prepare website",
     "build": "nuxt build .playground",
+    "build:web": "nuxt build website",
     "generate": "nuxt generate .playground",
+    "generate:web": "nuxt generate website",
     "preview": "nuxt preview .playground",
-    "cleanup": "nuxi cleanup .playground",
+    "preview:web": "nuxt preview website",
+    "cleanup": "nuxi cleanup .playground & nuxi cleanup website",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "dependencies": {
+  "devDependencies": {
     "@formkit/auto-animate": "0.8.2",
+    "@iconify-json/mingcute": "1.1.18",
     "@nuxt/eslint": "0.3.13",
     "@unocss/nuxt": "0.61.3",
-    "@unocss/preset-icons": "0.61.3",
-    "@unocss/reset": "0.61.3",
     "@vueuse/core": "10.11.0",
-    "@vueuse/nuxt": "10.11.0"
-  },
-  "devDependencies": {
-    "@iconify-json/mingcute": "1.1.18",
+    "@vueuse/nuxt": "10.11.0",
     "eslint": "9.6.0",
-    "nuxt": "3.12.3"
+    "nuxt": "3.12.3",
+    "unocss": "0.61.3",
+    "vue": "3.4.31"
   },
   "packageManager": "pnpm@9.5.0"
 }
