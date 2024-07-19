@@ -15,6 +15,7 @@ const props = withDefaults(defineProps<{
   loadingIcon?: `i-${string}`
   trailing?: boolean
   white?: boolean
+  disabled?: boolean
 }>(), {
   truncate: false,
   block: false,
@@ -26,6 +27,7 @@ const props = withDefaults(defineProps<{
   noPadding: false,
   trailing: false,
   white: false,
+  disabled: false,
 })
 const { size, square, variant, icon, loading, loadingIcon } = toRefs(props)
 
@@ -94,8 +96,8 @@ const iconSizeClasses = computed(() => {
 
 <template>
   <component
-    :is="to ? NuxtLink : 'button'"
-    :to="to"
+    :is="(to && !disabled) ? NuxtLink : 'button'"
+    :to="(to && !disabled) ? to : null"
     :target="target"
     class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 shrink-0 font-medium rounded-md items-center justify-center"
     :class="[{
@@ -105,15 +107,18 @@ const iconSizeClasses = computed(() => {
       '!p-0': noPadding,
       '!text-white': white,
     }, buttonSizeClasses, buttonColorClasses]"
+    :disabled="disabled"
+    v-bind="$attrs"
   >
     <span
-      v-if="icon"
+      v-if="icon || loading"
       :class="[{
         'order-last': trailing,
       }, iconClasses, iconSizeClasses, 'shrink-0']"
     />
     <component
       :is="to || icon ? 'span' : 'p'"
+      v-if="$slots.default"
       :class="{ 'text-left break-all line-clamp-1': truncate }"
     >
       <slot />

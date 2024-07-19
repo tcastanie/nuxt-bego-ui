@@ -53,9 +53,10 @@ onClickOutside(theHeader, () => {
         </component>
       </div>
       <ul v-if="links" class="hidden lg:flex gap-x-8 items-center">
-        <li v-for="{ label, to: linkTo, icon } of links" :key="label" class="relative">
+        <li v-for="{ label, to: linkTo, icon, target } of links" :key="label" class="relative">
           <NuxtLink
             :to="linkTo"
+            :target="target"
             :class="[{
               'text-bego-400': $route.path === linkTo,
               'hover:text-bego-400': $route.path !== linkTo,
@@ -68,7 +69,7 @@ onClickOutside(theHeader, () => {
         </li>
       </ul>
       <div v-else-if="$slots.center" class="hidden lg:flex items-center gap-x-8">
-        <slot name="panel" />
+        <slot name="center" />
       </div>
       <div class="flex items-center justify-end lg:flex-1 gap-1.5">
         <slot name="right" />

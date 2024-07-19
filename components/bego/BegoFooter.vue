@@ -32,6 +32,7 @@ const { links, container } = toRefs(props)
                 'text-white font-medium': $route.path === to,
                 'text-zinc-400 hover:text-zinc-300': $route.path !== to,
               }, 'text-sm']"
+              :target="target"
             >
               {{ label }}
               <span v-if="target === '_blank'" class="i-mingcute-arrow-right-up-line w-3 h-3 absolute top-0.5 -right-3.5 text-zinc-500" />
