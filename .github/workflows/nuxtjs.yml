@@ -25,6 +25,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Install pnpm
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: pnpm/action-setup@v4
   # Build job
   build:
     runs-on: ubuntu-latest
