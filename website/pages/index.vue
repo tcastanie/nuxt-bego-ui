@@ -13,14 +13,14 @@
       <BegoH2>Title H2</BegoH2>
       <BegoP>Paragraph ipsum consectetur mollit Duis consectetur aliqua quis anim enim commodo laboris nulla nulla eiusmod aute Duis ut proident deserunt. sint mollit voluptate adipiscing ex eiusmod incididunt magna do amet laborum mollit commodo do voluptate reprehenderit. ea anim qui anim sunt ut eu reprehenderit in voluptate laborum ad amet et minim ipsum eu do.</BegoP>
       <BegoDivider label="Divider" />
-      <div class="flex gap-2 items-center">
+      <div class="flex gap-2 items-center flex-wrap">
         <BegoIcon icon="i-mingcute-planet-line" />
         <BegoIcon icon="i-mingcute-planet-line" size="md" />
         <BegoIcon icon="i-mingcute-planet-line" size="lg" />
         <BegoIcon icon="i-mingcute-planet-line" size="xl" />
         <BegoIcon icon="i-mingcute-planet-line" size="2xl" />
       </div>
-      <div class="flex gap-2">
+      <div class="flex gap-2 flex-wrap">
         <BegoBadge>Venus</BegoBadge>
         <BegoBadge variant="outline">
           Earth
@@ -36,7 +36,7 @@
         <BegoKbd>Ctrl + C</BegoKbd>
       </div>
       <BegoDivider type="dashed" size="xl" icon="i-mingcute-ufo-2-line" />
-      <div class="flex gap-2">
+      <div class="flex gap-2 flex-wrap">
         <BegoButton>Solid</BegoButton>
         <BegoButton variant="outline">
           Outline
@@ -51,7 +51,7 @@
           Link
         </BegoButton>
       </div>
-      <div class="flex gap-2 items-center">
+      <div class="flex gap-2 items-center flex-wrap">
         <BegoButton variant="outline" size="2xs">
           2xs
         </BegoButton>
@@ -79,7 +79,7 @@
           block
         </BegoButton>
       </div>
-      <div class="flex gap-2 items-center">
+      <div class="flex gap-2 items-center flex-wrap">
         <BegoButton to="/">
           NuxtLink to /
         </BegoButton>
@@ -96,7 +96,7 @@
           Custom truncate value
         </BegoButton>
       </div>
-      <div class="flex gap-2 items-center">
+      <div class="flex gap-2 items-center flex-wrap">
         <BegoButton to="/" icon="i-mingcute-planet-line">
           Icon
         </BegoButton>
@@ -108,7 +108,7 @@
           No padding
         </BegoButton>
       </div>
-      <div class="flex gap-2 items-center">
+      <div class="flex gap-2 items-center flex-wrap">
         <BegoButton to="/" loading>
           loading
         </BegoButton>
