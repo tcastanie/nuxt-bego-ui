@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <BegoPage>
     <div class="grid gap-y-8">
@@ -9,10 +8,13 @@
         headline="Hero headline"
         icon="i-mingcute-planet-line"
       />
+
       <BegoH1>Title H1</BegoH1>
       <BegoH2>Title H2</BegoH2>
       <BegoP>Paragraph ipsum consectetur mollit Duis consectetur aliqua quis anim enim commodo laboris nulla nulla eiusmod aute Duis ut proident deserunt. sint mollit voluptate adipiscing ex eiusmod incididunt magna do amet laborum mollit commodo do voluptate reprehenderit. ea anim qui anim sunt ut eu reprehenderit in voluptate laborum ad amet et minim ipsum eu do.</BegoP>
+
       <BegoDivider label="Divider" />
+
       <div class="flex gap-2 items-center flex-wrap">
         <BegoIcon icon="i-mingcute-planet-line" />
         <BegoIcon icon="i-mingcute-planet-line" size="md" />
@@ -35,7 +37,9 @@
       <div class="flex gap-2">
         <BegoKbd>Ctrl + C</BegoKbd>
       </div>
+
       <BegoDivider type="dashed" size="xl" icon="i-mingcute-ufo-2-line" />
+
       <div class="flex gap-2 flex-wrap">
         <BegoButton>Solid</BegoButton>
         <BegoButton variant="outline">
@@ -118,10 +122,14 @@
         <BegoButton disabled>
           disabled
         </BegoButton>
+        <BegoButton variant="link" disabled>
+          link disabled
+        </BegoButton>
         <BegoButton to="/" disabled loading>
-          disabled + loading
+          with loading
         </BegoButton>
       </div>
+
       <BegoDivider type="dotted" size="xs" icon="i-mingcute-rocket-line" />
 
       <div class="grid gap-8">

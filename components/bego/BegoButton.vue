@@ -63,7 +63,7 @@ const buttonColorClasses = computed(() => {
     case 'ghost':
       return `text-bego-400 hover:bg-bego-950 disabled:bg-transparent focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-bego-400`
     case 'link':
-      return `text-bego-400 hover:text-bego-500 disabled:bg-bego-400 underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-bego-400`
+      return `text-bego-400 hover:text-bego-500 disabled:text-bego-400 underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-bego-400`
     default:
       return ''
   }
@@ -116,12 +116,10 @@ const iconSizeClasses = computed(() => {
         'order-last': trailing,
       }, iconClasses, iconSizeClasses, 'shrink-0']"
     />
-    <component
-      :is="to || icon ? 'span' : 'p'"
+    <slot
       v-if="$slots.default"
+      :as="to || icon ? 'span' : 'p'"
       :class="{ 'text-left break-all line-clamp-1': truncate }"
-    >
-      <slot />
-    </component>
+    />
   </component>
 </template>

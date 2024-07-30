@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <BegoPage>
     <ul class="grid gap-4">

@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "nuxi dev .playground",
     "dev:web": "nuxi dev website",
-    "prepare": "nuxt prepare .playground & nuxt prepare website",
+    "postinstall": "nuxt prepare .playground & nuxt prepare website",
     "build": "nuxt build .playground",
     "build:web": "nuxt build website",
     "generate": "nuxt generate .playground",
