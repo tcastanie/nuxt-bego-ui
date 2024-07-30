@@ -22,14 +22,15 @@
   "devDependencies": {
     "@formkit/auto-animate": "0.8.2",
     "@iconify-json/mingcute": "1.1.18",
-    "@nuxt/eslint": "0.3.13",
-    "@unocss/nuxt": "0.61.3",
+    "@nuxt/eslint": "0.4.0",
+    "@unocss/nuxt": "0.61.8",
     "@vueuse/core": "10.11.0",
     "@vueuse/nuxt": "10.11.0",
-    "eslint": "9.6.0",
-    "nuxt": "3.12.3",
-    "unocss": "0.61.3",
-    "vue": "3.4.31"
+    "eslint": "9.8.0",
+    "nuxt": "3.12.4",
+    "unocss": "0.61.8",
+    "typescript": "5.5.4",
+    "vue": "3.4.34"
   },
   "packageManager": "pnpm@9.5.0"
 }
