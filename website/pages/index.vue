@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { items, itemsDemo } = useAccordionItems()
+</script>
+
 <template>
   <BegoPage>
     <div class="grid gap-y-8">
@@ -151,6 +155,31 @@
         <BegoCard to="/">
           BegoCard link
         </BegoCard>
+      </div>
+
+      <BegoDivider icon="i-mingcute-layout-top-open-line" />
+
+      <div class="grid gap-12">
+        <BegoAccordion :items="items" variant="ghost" size="lg">
+          <template #custom-slot>
+            <div class="flex gap-8 items-center justify-evenly">
+              <BegoIcon icon="i-mingcute-planet-line text-yellow animate-spin" size="2xl" />
+              <BegoBadge variant="subtle" size="lg">
+                Hello there!
+              </BegoBadge>
+              <BegoBadge variant="solid" class="-rotate-15">
+                General Kenobi!
+              </BegoBadge>
+            </div>
+          </template>
+        </BegoAccordion>
+        <BegoAccordion
+          :items="itemsDemo"
+          multiple
+          default-open
+          open-icon="i-mingcute-add-line"
+          close-icon="i-mingcute-minimize-line"
+        />
       </div>
     </div>
   </BegoPage>
