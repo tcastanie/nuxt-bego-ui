@@ -1,7 +1,8 @@
-// @ts-check
+import unocss from '@unocss/eslint-config/flat'
 import withNuxt from './.playground/.nuxt/eslint.config.mjs'
 
 export default withNuxt(
+  unocss,
   {
     rules: {
       'no-console': ['warn'],

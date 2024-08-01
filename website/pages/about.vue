@@ -34,7 +34,7 @@
           no-padding
           size="xl"
         >
-          Original project by NuxtLabs
+          Original Nuxt UI project by NuxtLabs
         </BegoButton>
       </li>
     </ul>

@@ -99,7 +99,7 @@ const iconSizeClasses = computed(() => {
     :is="(to && !disabled) ? NuxtLink : 'button'"
     :to="(to && !disabled) ? to : null"
     :target="target"
-    class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 shrink-0 font-medium rounded-md items-center justify-center"
+    class="shrink-0 items-center justify-center rounded-md font-medium disabled:cursor-not-allowed disabled:opacity-75 focus-visible:outline-0 focus:outline-none"
     :class="[{
       'inline-flex': !block,
       'w-full flex': block,

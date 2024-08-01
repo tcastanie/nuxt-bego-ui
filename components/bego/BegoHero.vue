@@ -14,7 +14,7 @@ defineProps<{
         <span :class="[icon, 'w-10 h-10 shrink-0 text-bego-400']" aria-hidden="true" />
       </div>
       <div class="flex-1">
-        <div v-if="headline" class="mb-3 text-sm/6 font-semibold text-bego-400 flex items-center gap-1.5">
+        <div v-if="headline" class="mb-3 flex items-center gap-1.5 text-sm/6 text-bego-400 font-semibold">
           {{ headline }}
         </div>
         <BegoH1 v-if="$slots.title">

@@ -20,11 +20,11 @@ const { links, container } = toRefs(props)
         'max-w-7xl': container,
       }, 'mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-4 lg:flex lg:items-center lg:justify-between lg:gap-x-3']"
     >
-      <div class="lg:flex-1 flex items-center justify-center lg:justify-end gap-x-1.5 lg:order-3">
+      <div class="flex items-center justify-center gap-x-1.5 lg:order-3 lg:flex-1 lg:justify-end">
         <slot name="right" />
       </div>
-      <div class="mt-3 lg:mt-0 lg:order-2 flex items-center justify-center">
-        <ul v-if="links" class="flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-6">
+      <div class="mt-3 flex items-center justify-center lg:order-2 lg:mt-0">
+        <ul v-if="links" class="flex flex-col items-center justify-center gap-4 md:flex-row lg:gap-6">
           <li v-for="{ label, to, target } of links" :key="label" class="relative">
             <NuxtLink
               :to="to"
@@ -35,7 +35,7 @@ const { links, container } = toRefs(props)
               :target="target"
             >
               {{ label }}
-              <span v-if="target === '_blank'" class="i-mingcute-arrow-right-up-line w-3 h-3 absolute top-0.5 -right-3.5 text-zinc-500" />
+              <span v-if="target === '_blank'" class="i-mingcute-arrow-right-up-line absolute top-0.5 h-3 w-3 text-zinc-500 -right-3.5" />
             </NuxtLink>
           </li>
         </ul>
@@ -43,7 +43,7 @@ const { links, container } = toRefs(props)
           <slot name="center" />
         </template>
       </div>
-      <div class="flex items-center justify-center lg:justify-start lg:flex-1 gap-x-1.5 mt-3 lg:mt-0 lg:order-1">
+      <div class="mt-3 flex items-center justify-center gap-x-1.5 lg:order-1 lg:mt-0 lg:flex-1 lg:justify-start">
         <slot name="left" />
       </div>
     </div>

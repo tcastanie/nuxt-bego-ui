@@ -80,14 +80,14 @@ function onLeave(_el: Element) {
         :disabled
         @click="togglePlus()"
       >
-        <div class="inline-flex items-center gap-x-1.5 w-full">
+        <div class="w-full inline-flex items-center gap-x-1.5">
           <BegoIcon
             v-if="icon"
             :icon
             size="md"
             aria-hidden="true"
           />
-          <span class="text-left break-all line-clamp-1">{{ label }}</span>
+          <span class="line-clamp-1 break-all text-left">{{ label }}</span>
           <BegoIcon
             v-if="openIcon || closeIcon"
             :icon="!isOpen ? openIcon ? openIcon : '' : closeIcon ? closeIcon : openIcon ? openIcon : ''"
@@ -107,10 +107,10 @@ function onLeave(_el: Element) {
         @leave="onLeave"
       >
         <div v-show="isOpen">
-          <div v-if="content" class="text-sm text-zinc-400 pt-1.5 pb-3">
+          <div v-if="content" class="pb-3 pt-1.5 text-sm text-zinc-400">
             {{ content }}
           </div>
-          <div v-else-if="slot && $slots[slot]" class="pt-1.5 pb-3">
+          <div v-else-if="slot && $slots[slot]" class="pb-3 pt-1.5">
             <slot :name="slot" />
           </div>
         </div>

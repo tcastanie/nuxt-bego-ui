@@ -19,14 +19,14 @@ const { items, itemsDemo } = useAccordionItems()
 
       <BegoDivider label="Divider" />
 
-      <div class="flex gap-2 items-center flex-wrap">
+      <div class="flex flex-wrap items-center gap-2">
         <BegoIcon icon="i-mingcute-planet-line" />
         <BegoIcon icon="i-mingcute-planet-line" size="md" />
         <BegoIcon icon="i-mingcute-planet-line" size="lg" />
         <BegoIcon icon="i-mingcute-planet-line" size="xl" />
         <BegoIcon icon="i-mingcute-planet-line" size="2xl" />
       </div>
-      <div class="flex gap-2 flex-wrap">
+      <div class="flex flex-wrap gap-2">
         <BegoBadge>Venus</BegoBadge>
         <BegoBadge variant="outline">
           Earth
@@ -44,7 +44,7 @@ const { items, itemsDemo } = useAccordionItems()
 
       <BegoDivider type="dashed" size="xl" icon="i-mingcute-ufo-2-line" />
 
-      <div class="flex gap-2 flex-wrap">
+      <div class="flex flex-wrap gap-2">
         <BegoButton>Solid</BegoButton>
         <BegoButton variant="outline">
           Outline
@@ -59,7 +59,7 @@ const { items, itemsDemo } = useAccordionItems()
           Link
         </BegoButton>
       </div>
-      <div class="flex gap-2 items-center flex-wrap">
+      <div class="flex flex-wrap items-center gap-2">
         <BegoButton variant="outline" size="2xs">
           2xs
         </BegoButton>
@@ -82,12 +82,12 @@ const { items, itemsDemo } = useAccordionItems()
           2xl
         </BegoButton>
       </div>
-      <div class="flex gap-2 items-center">
+      <div class="flex items-center gap-2">
         <BegoButton block>
           block
         </BegoButton>
       </div>
-      <div class="flex gap-2 items-center flex-wrap">
+      <div class="flex flex-wrap items-center gap-2">
         <BegoButton to="/">
           NuxtLink to /
         </BegoButton>
@@ -104,7 +104,7 @@ const { items, itemsDemo } = useAccordionItems()
           Custom truncate value
         </BegoButton>
       </div>
-      <div class="flex gap-2 items-center flex-wrap">
+      <div class="flex flex-wrap items-center gap-2">
         <BegoButton to="/" icon="i-mingcute-planet-line">
           Icon
         </BegoButton>
@@ -116,7 +116,7 @@ const { items, itemsDemo } = useAccordionItems()
           No padding
         </BegoButton>
       </div>
-      <div class="flex gap-2 items-center flex-wrap">
+      <div class="flex flex-wrap items-center gap-2">
         <BegoButton to="/" loading>
           loading
         </BegoButton>
@@ -162,7 +162,7 @@ const { items, itemsDemo } = useAccordionItems()
       <div class="grid gap-12">
         <BegoAccordion :items="items" variant="ghost" size="lg">
           <template #custom-slot>
-            <div class="flex gap-8 items-center justify-evenly">
+            <div class="flex items-center justify-evenly gap-8">
               <BegoIcon icon="i-mingcute-planet-line text-yellow animate-spin" size="2xl" />
               <BegoBadge variant="subtle" size="lg">
                 Hello there!

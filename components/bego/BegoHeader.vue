@@ -27,9 +27,9 @@ onClickOutside(theHeader, () => {
 </script>
 
 <template>
-  <header ref="theHeader" class="bg-zinc-900/75 backdrop-blur border-b border-zinc-800 -mb-px sticky top-0 z-50">
+  <header ref="theHeader" class="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-900/75 backdrop-blur -mb-px">
     <div :class="[{ 'max-w-7xl': container }, 'header-height flex items-center justify-between gap-3 mx-auto px-4 sm:px-6 lg:px-8']">
-      <div class="lg:flex-1 flex items-center gap-1.5">
+      <div class="flex items-center gap-1.5 lg:flex-1">
         <template v-if="$slots.left">
           <slot name="left" />
         </template>
@@ -37,7 +37,7 @@ onClickOutside(theHeader, () => {
           :is="to ? NuxtLink : 'div'"
           v-else-if="$slots.logo"
           :to="to"
-          class="flex-shrink-0 font-bold text-xl text-white flex items-end gap-1.5"
+          class="flex flex-shrink-0 items-end gap-1.5 text-xl text-white font-bold"
           @click="to ? togglePanel(false) : null"
         >
           <slot name="logo" />
@@ -46,13 +46,13 @@ onClickOutside(theHeader, () => {
           :is="to ? NuxtLink : 'div'"
           v-else-if="title"
           :to="to"
-          class="font-bold text-xl text-white flex items-end"
+          class="flex items-end text-xl text-white font-bold"
           @click="to ? togglePanel(false) : null"
         >
           {{ title }}
         </component>
       </div>
-      <ul v-if="links" class="hidden lg:flex gap-x-8 items-center">
+      <ul v-if="links" class="hidden items-center gap-x-8 lg:flex">
         <li v-for="{ label, to: linkTo, icon, target } of links" :key="label" class="relative">
           <NuxtLink
             :to="linkTo"
@@ -68,10 +68,10 @@ onClickOutside(theHeader, () => {
           </NuxtLink>
         </li>
       </ul>
-      <div v-else-if="$slots.center" class="hidden lg:flex items-center gap-x-8">
+      <div v-else-if="$slots.center" class="hidden items-center gap-x-8 lg:flex">
         <slot name="center" />
       </div>
-      <div class="flex items-center justify-end lg:flex-1 gap-1.5">
+      <div class="flex items-center justify-end gap-1.5 lg:flex-1">
         <slot name="right" />
         <BegoButton
           v-if="links || $slots.panel"
@@ -85,9 +85,9 @@ onClickOutside(theHeader, () => {
     </div>
     <div
       v-if="panel"
-      class="panel-top fixed w-full z-50 lg:hidden px-4 sm:px-6 py-3 bg-zinc-900 border-b border-zinc-800"
+      class="panel-top fixed z-50 w-full border-b border-zinc-800 bg-zinc-900 px-4 py-3 lg:hidden sm:px-6"
     >
-      <div v-if="links" class="space-y-3 mb-3 lg:mb-6 -mx-1 lg:mx-0">
+      <div v-if="links" class="mb-3 -mx-1 lg:mx-0 lg:mb-6 space-y-3">
         <NuxtLink
           v-for="{ label, to: linkTo, icon, target } of links"
           :key="label"
@@ -111,9 +111,9 @@ onClickOutside(theHeader, () => {
               aria-hidden="true"
             />
           </div>
-          <span class="text-sm/6 relative">
+          <span class="relative text-sm/6">
             {{ label }}
-            <span v-if="target==='_blank'" class="i-mingcute-external-link-line w-3 h-3 absolute top-0.5 -right-3.5 text-zinc-500" />
+            <span v-if="target==='_blank'" class="i-mingcute-external-link-line absolute top-0.5 h-3 w-3 text-zinc-500 -right-3.5" />
           </span>
         </NuxtLink>
       </div>
