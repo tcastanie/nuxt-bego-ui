@@ -24,6 +24,7 @@ export default defineNuxtConfig({
 @formkit/auto-animate
 @iconify-json/mingcute
 @nuxt/eslint
+@unocss/core
 @unocss/nuxt
 @vueuse/core
 @vueuse/nuxt
@@ -34,7 +35,7 @@ vue
 ```
 
 ```bash
-pnpm i -D @formkit/auto-animate @iconify-json/mingcute @nuxt/eslint @unocss/nuxt @vueuse/core @vueuse/nuxt eslint nuxt unocss vue
+pnpm i -D @formkit/auto-animate @iconify-json/mingcute @nuxt/eslint @unocss/core @unocss/nuxt @vueuse/core @vueuse/nuxt eslint nuxt unocss vue
 ```
 
 ## UnoCSS configuration
