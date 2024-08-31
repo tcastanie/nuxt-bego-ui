@@ -1,9 +1,12 @@
 <script setup lang="ts">
-const { items, itemsDemo } = useAccordionItems()
+const { items, itemsDemo, breadcrumbLinks } = useAccordionItems()
 </script>
 
 <template>
   <BegoPage>
+    <BegoBreadcrumb :links="breadcrumbLinks" />
+    <BegoBreadcrumb :links="breadcrumbLinks" divider="i-mingcute-more-2-line" />
+
     <div class="grid gap-y-8">
       <BegoHero title="Welcome 🌺" description="Nuxt bego UI showcase" />
       <BegoHero

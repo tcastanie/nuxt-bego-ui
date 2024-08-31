@@ -26,6 +26,7 @@ export default defineConfig({
     'text-white',
     'text-bego-400',
     'text-bego-500',
+    'text-zinc-200',
     'bg-bego-400',
     'bg-bego-950',
     'bg-bego-950/10',
