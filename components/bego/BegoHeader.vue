@@ -59,7 +59,7 @@ onClickOutside(theHeader, () => {
             :target="target"
             :class="[{
               'text-bego-400': $route.path.includes(linkTo),
-              'hover:text-bego-400': $route.path.includes(linkTo),
+              'hover:text-bego-400': !$route.path.includes(linkTo),
             }, 'text-sm/6 font-semibold flex items-center gap-1']"
             @click="togglePanel(false)"
           >
@@ -95,7 +95,7 @@ onClickOutside(theHeader, () => {
           :target="target"
           :class="[{
             'text-bego-400': $route.path.includes(linkTo),
-            'text-zinc-400 hover:text-zinc-200 font-medium': $route.path.includes(linkTo),
+            'text-zinc-400 hover:text-zinc-200 font-medium': !$route.path.includes(linkTo),
           }, 'flex items-center gap-1.5 lg:gap-2 group']"
           @click="togglePanel(false)"
         >
@@ -103,7 +103,7 @@ onClickOutside(theHeader, () => {
             v-if="icon"
             :class="[{
               'bg-bego-400 ring-bego-400 text-zinc-900': $route.path.includes(linkTo),
-              'bg-zinc-800/50 ring-zinc-700 group-hover:bg-bego-400 group-hover:ring-bego-400 group-hover:text-zinc-900': $route.path.includes(linkTo),
+              'bg-zinc-800/50 ring-zinc-700 group-hover:bg-bego-400 group-hover:ring-bego-400 group-hover:text-zinc-900': !$route.path.includes(linkTo),
             }, 'rounded-md p-1 inline-flex ring-inset ring-1']"
           >
             <span
